@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>ルカのホームページ</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div id="showClock"></div>
+            <header>
+                <h1>ルカのホームページへようこそ！</h1>
+            </header>
+            <div class="preface">
+                <div class="col-xs-6">
+                <img src="img/ninokuro.jpeg" alt="ニノクロの写真"width="220" height="160">
+            </div>
+            <div class="col-xs-6">
+                <p>
+                    なにも出せませんが、<br>
+                    どうぞゆっくりしてって<br>
+                    くださいね！
+                </p>
+            </div>
+        <div class="information">
+            <div class="row">
+
+                <div class="col-xs-12">  
+                    <h4>《自己紹介》</h4>
+                    <ul>
+                        <li>好きなこと: ゲーム</li>
+                        <li>行きたいところ: ギリシャ</li>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d410919.492083294!2d25.165379359110734!3d36.4259215952445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1499c62f6b35c02d%3A0x400bd2ce2b9c7d0!2z44Ku44Oq44K344OjIOODhuOCo-ODqQ!5e0!3m2!1sja!2sjp!4v1667891429199!5m2!1sja!2sjp" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+	                </ul>
+                    <h3>《趣味》</h3>
+                    <ul>
+                        <li>ゲームしながらVCをすること</li>
+	                </ul>
+                    <h1>《リンク集》</h4>
+                    <ul>
+                        <li><a href="https://2worlds.netmarble.com/ja" target="_self">二ノ国クロスワールド</a></li>
+                        <li><a href="https://mememori-game.com/" target="_self">メメントモリ</a></li>
+                        <li><a href="https://www.knt.co.jp/tabiplanet/kaigai/200207/" target="_self">サントリーニ島</a></li>
+                    </ul>
+
+                    <div class="reference">
+                        ◆ このWebページは、以下を参考にさせていただきました。
+                        <ul>
+                            <li>
+                                <a href="https://book.mynavi.jp/ec/products/detail/id=65861" target="_self">これからWebをはじめる人のHTML＆CSS、JavaScriptのきほんのきほん (たにぐちまこと著 マイナビ出版)</a>
+                            </li>
+                            <li>
+                                <a href="http://www.shurey.com/js/samples/2_msg10.html" target="_self">http://www.shurey.com/js/samples/2_msg10.html</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <footer class=”afterword”>
+            <h2>見てくれてありがとうございました！<br>
+                どうぞよろしくです♪</h2>
+        </footer>
+    </div>
+    <script>
+        var addZero = function(value) {
+            if (value < 10) {
+                value = '0' + value;
+            }
+            return value;
+        };        
+        timerID = setInterval('clock()', 100);         function clock() {
+            document.getElementById("showClock").innerHTML = getNow();
+        }
+        function getNow() {
+            var now = new Date();
+            var year = now.getFullYear();
+            var month = now.getMonth() + 1;          month = addZero(month);
+            var day = now.getDate();
+            day = addZero(day);
+            var dayOfWeek = now.getDay(); 
+            var daysOfWeek = new Array("日", "月", "火", "水", "木", "金", "土");
+            var s = "【" + year + "/" + month + "/" + day + " (" + daysOfWeek[dayOfWeek] + ") 】"; 
+            return s;
+        }
+    </script>
+</body>
+
+</html>
